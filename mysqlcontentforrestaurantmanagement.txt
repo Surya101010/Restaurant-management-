@@ -1,0 +1,24 @@
+CREATE DATABASE restaurant_management;
+
+USE restaurant_management;
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    table_number INT,
+    items VARCHAR(255),
+    status VARCHAR(50),
+    order_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE reservations (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    table_number INT,
+    reservation_time DATETIME
+);
+
+CREATE TABLE inventory (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100),
+    quantity INT
+);
